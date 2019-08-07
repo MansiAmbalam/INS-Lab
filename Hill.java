@@ -61,7 +61,7 @@ class Hill
 		else
 		System.out.println("\nDecrypted text: "+ans);
 	}
-	public static String ansFinal(String pl,int[][] key,String alp)
+	public static String ansFinal(String ip,int[][] key,String alp)
 	{
 		int tmp;
 		StringBuffer tmpAns=new StringBuffer();
@@ -70,7 +70,7 @@ class Hill
 			tmp=0;
 			for(int j=0;j<key[0].length;j++)
 			{
-				tmp+=(key[i][j]*alp.indexOf(pl.charAt(j)));
+				tmp+=(key[i][j]*alp.indexOf(ip.charAt(j)));
 			}
 			tmpAns.append(alp.charAt(tmp%26));
 		}
